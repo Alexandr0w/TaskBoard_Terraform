@@ -2,7 +2,7 @@ name: 'Terraform Plan and Apply'
 
 on:
   push:
-    branches: [ "main" ]
+     branches: [ "main" ]
   pull_request:
   workflow_dispatch:
 
@@ -12,6 +12,7 @@ env:
   ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
   ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
     
+
 jobs:
   terraform_plan:
     name: 'Terraform Plan Job'
