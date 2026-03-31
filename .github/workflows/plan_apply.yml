@@ -33,7 +33,7 @@ jobs:
       run: terraform init
 
     - name: Terraform Plan
-      run: terraform plan -out=tfplan    
+      run: terraform plan -lock-timeout=5m -out=tfplan
 
     - name: Save plan output
       uses: actions/upload-artifact@v4
